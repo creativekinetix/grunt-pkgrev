@@ -1,0 +1,50 @@
+{
+  "name": "grunt-pkgrev",
+  "description": "Asset revisioning using package.json version number. Creates revmap.json file for usemin.",
+  "version": "1.3.7",
+  "homepage": "https://github.com/creativekinetix/grunt-pkgrev",
+  "author": {
+    "name": "Michael Boucher",
+    "email": "michael.boucher@creativekinetix.com",
+    "url": "http://www.creativekinetix.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/creativekinetix/grunt-pkgrev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/creativekinetix/grunt-pkgrev/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/creativekinetix/grunt-pkgrev/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.2",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-bump": "0.0.13",
+    "grunt-usemin": "~2.0.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin",
+    "revision",
+    "file revision",
+    "rev",
+    "file rev",
+    "revmap"
+  ]
+}
