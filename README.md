@@ -1,7 +1,9 @@
 # grunt-pkgrev
 
 > Add revision number to your files based on package.json version.
+
 > WARNING: THIS CODE IS NOT PRODUCTION READY
+
 > WARNING: THIS README IS NOT UPDATED
 
 ## Getting Started
