@@ -2,9 +2,6 @@
 
 > Add revision number to your files based on package.json version.
 
-> WARNING: THIS CODE IS NOT PRODUCTION READY
-
-> WARNING: THIS README IS NOT UPDATED
 
 ## Getting Started
 This plugin requires Grunt `~0.4.2`
@@ -74,6 +71,12 @@ and `grunt-usemin`.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Roadmap
+
+### 0.2.0
+- Specify where to grab version/revision number
+- Specify target directory (non-destructive)
 
 ## Release History
 0.1.0 - Contribute, Comment, Fork, Enjoy!
