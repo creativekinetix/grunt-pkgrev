@@ -24,70 +24,56 @@ grunt.loadNpmTasks('grunt-pkgrev');
 ## The "pkgrev" task
 
 ### Overview
-In your project's Gruntfile, add a section named `pkgrev` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `pkgrev` to the data object passed into `grunt.initConfig()`. 
 
 ```js
 grunt.initConfig({
   pkgrev: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
+      all_options: {
+        options: {
+          'revmap': 'test/output/all/revmap.json',
+        },
+        files: {
+          'all': ['test/output/all/assets/**/*'],
+        },
+      },
+      only_options: {
+        options: {
+          'revmap': 'test/output/only/revmap.json',
+        },
+        files: {
+          'only': ['test/output/only/assets/**/*.{css,js,jpg}'],
+        },
+      },
+      all_except_options: {
+        options: {
+          'revmap': 'test/output/except/revmap.json',
+        },
+        files: {
+          'except': ['test/output/except/assets/**/*', '!test/output/except/**/*.{png,jpg}'],
+        },
+      },
+    }
 });
 ```
 
 ### Options
 
-#### options.separator
+#### options.revmap
 Type: `String`
-Default value: `',  '`
+Default value: `'revmap.json'`
 
-A string value that is used to do something with whatever.
+The path where you want to save the generated revmap.json file. The default is in the project root.
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
+#### Files
+Type: `String` | `Array`
 
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  pkgrev: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  pkgrev: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
+The files you want to rev. Currently this is a destructive operation. Use in conjunction with `copy` or similar to move original files.
+Typically you would rev after is said and done inside the distribution directory. See the `Gruntfile.js` for sample flow working with `grunt-contrib-copy`, `grunt-bump`
+and `grunt-usemin`.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+0.1.0 - Contribute, Comment, Fork, Enjoy!
