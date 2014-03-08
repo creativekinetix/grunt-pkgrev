@@ -141,7 +141,7 @@ module.exports = function(grunt) {
     // BUMP VERSION
     bump: {
       options: {
-        files: ['package.json'],
+        files: ['version.json'],
         updateConfigs: [],
         commit: false,
         commitMessage: 'Release v%VERSION%',
@@ -162,6 +162,7 @@ module.exports = function(grunt) {
       all_options: {
         options: {
           'revmap': 'test/output/all/revmap.json',
+          'vfile':  'version.json'
         },
         files: {
           'all': ['test/output/all/assets/**/*'],
@@ -170,6 +171,7 @@ module.exports = function(grunt) {
       only_options: {
         options: {
           'revmap': 'test/output/only/revmap.json',
+          'vfile':  'version.json'
         },
         files: {
           'only': ['test/output/only/assets/**/*.{css,js,jpg}'],
@@ -178,6 +180,7 @@ module.exports = function(grunt) {
       all_except_options: {
         options: {
           'revmap': 'test/output/except/revmap.json',
+          'vfile':  'version.json'
         },
         files: {
           'except': ['test/output/except/assets/**/*', '!test/output/except/**/*.{png,jpg}'],

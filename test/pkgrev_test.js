@@ -4,7 +4,8 @@ var grunt   = require('grunt'),
     fs      = require('fs'),
     path    = require('path'),
     pkg     = grunt.file.readJSON('package.json'),
-    ver     = pkg.version;
+    vfile   = grunt.file.readJSON('version.json'), // misc file to test
+    ver     = vfile.version;
 
 
 

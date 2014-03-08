@@ -20,11 +20,13 @@ module.exports = function(grunt) {
     
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      'revmap': 'revmap.json'
+      'revmap': 'revmap.json',
+      'vfile':  'package.json',
     });
     
-    var pkg    = grunt.file.readJSON('package.json'),
-        revmap = {};
+    var pkg     = grunt.file.readJSON('package.json'),
+        vfile   = (options.vfile === 'package.json') ? pkg : grunt.file.readJSON(options.vfile),
+        revmap  = {};
     
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
@@ -42,7 +44,7 @@ module.exports = function(grunt) {
         
         var ext = path.extname(filepath),
             dirname = path.dirname(filepath),
-            revved = [ path.basename(filepath, ext), pkg.version, ext.slice(1)].join('.');
+            revved = [ path.basename(filepath, ext), vfile.version, ext.slice(1)].join('.');
             
         revmap[path.normalize(filepath)] = path.join(dirname, revved);
         grunt.file.write(options.revmap , JSON.stringify(revmap));    
