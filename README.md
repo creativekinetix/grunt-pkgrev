@@ -66,7 +66,13 @@ Default value: `'revmap.json'`
 
 The path where you want to save the generated revmap.json file. The default is in the project root.
 
-#### Files
+#### options.vfile
+Type: `String`
+Default value: `'package.json'`
+
+Version File. The file with the `version` property to use for revision.
+
+### Files
 Type: `String` | `Array`
 
 The files you want to rev. Currently this is a destructive operation. Use in conjunction with `copy` or similar to move original files.
