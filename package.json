@@ -1,7 +1,7 @@
 {
   "name": "grunt-pkgrev",
   "description": "Asset revisioning using package.json (or other) version property. Creates revmap.json file for usemin.",
-  "version": "1.3.7",
+  "version": "1.4.0",
   "homepage": "https://github.com/creativekinetix/grunt-pkgrev",
   "author": {
     "name": "Michael Boucher",
