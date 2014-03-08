@@ -45,6 +45,7 @@
     "file revision",
     "rev",
     "file rev",
-    "revmap"
+    "revmap",
+    "cache buster"
   ]
 }
