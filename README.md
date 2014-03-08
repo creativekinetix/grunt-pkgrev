@@ -1,6 +1,6 @@
 # grunt-pkgrev
 
-> Add revision number to your files based on package.json version.
+> Asset revisioning using package.json (or other) `version` property. Creates revmap.json file for usemin.
 
 
 ## Getting Started
@@ -29,14 +29,17 @@ grunt.initConfig({
       all_options: {
         options: {
           'revmap': 'test/output/all/revmap.json',
+          'vfile':  'version.json'
         },
         files: {
           'all': ['test/output/all/assets/**/*'],
+          'vfile':  'version.json'
         },
       },
       only_options: {
         options: {
           'revmap': 'test/output/only/revmap.json',
+          'vfile':  'version.json'
         },
         files: {
           'only': ['test/output/only/assets/**/*.{css,js,jpg}'],
@@ -45,6 +48,7 @@ grunt.initConfig({
       all_except_options: {
         options: {
           'revmap': 'test/output/except/revmap.json',
+          'vfile':  'version.json'
         },
         files: {
           'except': ['test/output/except/assets/**/*', '!test/output/except/**/*.{png,jpg}'],
