@@ -74,9 +74,10 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Roadmap
 
-### 0.2.0
-- Specify where to grab version/revision number
-- Specify target directory (non-destructive)
+### 1.4.0
+- Specify `file` and/or `field` to use for version/revision number.
 
 ## Release History
-0.1.0 - Contribute, Comment, Fork, Enjoy!
+2014-03-07: 1.3.7 - Initial Release (Just because I forgot to reset the version number after testing).
+
+Contribute, Comment, Fork, Enjoy!
