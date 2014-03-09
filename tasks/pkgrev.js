@@ -16,7 +16,7 @@ module.exports = function(grunt) {
   var fs    = require('fs'),
       path  = require('path');
   
-  grunt.registerMultiTask('pkgrev', 'Asset revisioning using package.json version number. Creates revmap.json file for usemin.', function() {
+  grunt.registerMultiTask('pkgrev', 'Asset revisioning using package.json (or other) version property. Creates revmap.json file for usemin.', function() {
     
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
