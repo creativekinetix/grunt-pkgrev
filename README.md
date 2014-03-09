@@ -84,7 +84,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
-2014-03-07: 1.3.7 - Initial Release (Just because I forgot to reset the version number after testing).
-2014-03-08: 1.4.0 - Added support for specifying the file to use the version property.
+- 2014-03-07: 1.3.7 - Initial Release (Just because I forgot to reset the version number after testing).
+- 2014-03-08: 1.4.0 - Added support for specifying the file to use the version property.
 
 Contribute, Comment, Fork, Enjoy!
